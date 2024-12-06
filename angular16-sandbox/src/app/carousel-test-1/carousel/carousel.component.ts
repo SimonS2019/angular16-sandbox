@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css'],
 })
 export class CarouselComponent {
-  items = ['Slide 1', 'Slide 2', 'Slide 3', 'Slide 4'];
+  items = [
+    'https://picsum.photos/200/300?random=1',
+    'https://picsum.photos/200/300?random=2',
+    'https://picsum.photos/200/300?random=3',
+    'https://picsum.photos/200/300?random=4',
+  ];
 
   customOptions = {
     loop: true,
