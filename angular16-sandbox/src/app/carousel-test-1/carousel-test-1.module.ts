@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CarouselTest1RoutingModule } from './carousel-test-1-routing.module';
 import { CarouselComponent } from './carousel/carousel.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 @NgModule({
@@ -11,7 +12,9 @@ import { CarouselComponent } from './carousel/carousel.component';
   ],
   imports: [
     CommonModule,
-    CarouselTest1RoutingModule
+    CarouselTest1RoutingModule,
+    CarouselModule ,
+    
   ]
 })
 export class CarouselTest1Module { }

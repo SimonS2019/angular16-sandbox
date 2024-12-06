@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Import this module
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BsDropdownModule.forRoot() // Add this line
+    BsDropdownModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
