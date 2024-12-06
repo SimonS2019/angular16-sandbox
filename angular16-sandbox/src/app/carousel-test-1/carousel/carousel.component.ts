@@ -37,4 +37,8 @@ export class CarouselComponent {
     },
     nav: true,
   };
+
+  logImageUrl(url: string) {
+    console.log(url);
+  }
 }
