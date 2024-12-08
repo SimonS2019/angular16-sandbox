@@ -7,12 +7,17 @@ import { Component } from '@angular/core';
 })
 export class CarouselTestComponent {
   slides = [
-    { img: 'http://placehold.it/350x150/000000' },
-    { img: 'http://placehold.it/350x150/111111' },
-    { img: 'http://placehold.it/350x150/333333' },
-    { img: 'http://placehold.it/350x150/666666' },
+    { img: 'https://picsum.photos/200/300?random=1' },
+    { img: 'https://picsum.photos/200/300?random=2' },
+    { img: 'https://picsum.photos/200/300?random=3' },
+    { img: 'https://picsum.photos/200/300?random=4' },
+    { img: 'https://picsum.photos/200/300?random=5' },
+    { img: 'https://picsum.photos/200/300?random=6' },
+    { img: 'https://picsum.photos/200/300?random=7' },
   ];
+
   slideConfig = { slidesToShow: 4, slidesToScroll: 4 };
+  imagesNumber: number = 1;
 
   addSlide() {
     this.slides.push({ img: 'http://placehold.it/350x150/777777' });
@@ -32,9 +37,15 @@ export class CarouselTestComponent {
 
   afterChange(e: any) {
     console.log('afterChange');
+    this.imagesNumber = e.currentSlide + 1;
   }
 
   beforeChange(e: any) {
     console.log('beforeChange');
+  }
+
+  logImageUrl(url: string) {
+    this.imagesNumber = this.slides.findIndex((slide) => slide.img === url) + 1;
+    console.log(url);
   }
 }
