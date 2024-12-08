@@ -13,6 +13,8 @@ export class CarouselComponent {
     'https://picsum.photos/200/300?random=4',
   ];
 
+  imagesNumber : number = 0;
+
   customOptions = {
     loop: true,
     mouseDrag: true,
@@ -39,6 +41,7 @@ export class CarouselComponent {
   };
 
   logImageUrl(url: string) {
+    this.imagesNumber = this.items.indexOf(url) + 1;
     console.log(url);
   }
 }

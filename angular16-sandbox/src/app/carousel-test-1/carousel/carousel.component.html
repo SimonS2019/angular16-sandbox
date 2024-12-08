@@ -1,5 +1,7 @@
 <h1>NGX-Owl-Carousel-O 16.0.0 </h1>
 
+<h1>This is image number  {{imagesNumber}}</h1>
+
 <owl-carousel-o [options]="customOptions">
   <ng-template carouselSlide *ngFor="let item of items">
     <img [src]="item" alt="Carousel image" (click)="logImageUrl(item)">
