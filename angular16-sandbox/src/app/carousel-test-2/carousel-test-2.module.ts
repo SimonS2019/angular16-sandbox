@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CarouselTest2RoutingModule } from './carousel-test-2-routing.module';
 import { CarouselTestComponent } from './carousel-test/carousel-test.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { CarouselTestComponent } from './carousel-test/carousel-test.component';
   ],
   imports: [
     CommonModule,
-    CarouselTest2RoutingModule
+    CarouselTest2RoutingModule,
+    SlickCarouselModule 
   ]
 })
 export class CarouselTest2Module { }
