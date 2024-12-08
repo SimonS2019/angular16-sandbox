@@ -2,7 +2,7 @@
 
 ### Demo URL
 
-Check out the live demo at: [Demo URL](https://example.com/demo)
+Check out the live demo at: [Demo URL](https://angular16-sandbox.vercel.app/)
 
 ## Overview
 
