@@ -9,6 +9,13 @@ const routes: Routes = [
         (m) => m.CarouselTest1Module
       ),
   },
+  {
+    path: 'carousel-test-2',
+    loadChildren: () =>
+      import('./carousel-test-2/carousel-test-2.module').then(
+        (m) => m.CarouselTest2Module
+      ),
+  },
   // other routes...
 ];
 
