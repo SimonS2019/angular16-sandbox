@@ -2,7 +2,7 @@
 
 <h1>This is image number  {{imagesNumber}}</h1>
 
-<div class="selected-image-container" *ngIf="selectedImage">
+<div class="selected-image-container" >
   <img
     class="slide"
     [src]="selectedImage"
@@ -11,9 +11,12 @@
 </div>
 
 <div class="carousel-container">
+  <button (click)="prevImage()">Last</button>
+  <button (click)="nextImage()">Next</button>
+
   <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide *ngFor="let item of items" data-merge="3" >
-      <img [src]="item" class="image" alt="Carousel image" (click)="logImageUrl(item)" >
+    <ng-template carouselSlide *ngFor="let item of items, index as i" data-merge="3" >
+      <img [src]="item" class="image" alt="Carousel image" (click)="goToImage(i)" >
     </ng-template>
   </owl-carousel-o>
 </div>

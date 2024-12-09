@@ -55,9 +55,22 @@ export class CarouselComponent implements OnInit {
     this.selectedImage = this.items[0];
   }
 
-  logImageUrl(url: string) {
-    this.imagesNumber = this.items.indexOf(url) + 1;
-    this.selectedImage = url;
-    console.log(url);
+  goToImage(i: number) {
+    this.imagesNumber = i + 1;
+    this.selectedImage = this.items[i];
+  }
+
+  prevImage() {
+    if (this.imagesNumber > 1) {
+      this.imagesNumber--;
+      this.selectedImage = this.items[this.imagesNumber - 1];
+    }
+  }
+
+  nextImage() {
+    if (this.imagesNumber < this.items.length) {
+      this.imagesNumber++;
+      this.selectedImage = this.items[this.imagesNumber - 1];
+    }
   }
 }
