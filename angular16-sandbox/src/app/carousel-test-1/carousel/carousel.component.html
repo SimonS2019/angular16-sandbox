@@ -12,7 +12,7 @@
 
 <div class="carousel-container">
   <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide *ngFor="let item of items">
+    <ng-template carouselSlide *ngFor="let item of items" data-merge="3" >
       <img [src]="item" alt="Carousel image" (click)="logImageUrl(item)">
     </ng-template>
   </owl-carousel-o>
