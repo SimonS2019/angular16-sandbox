@@ -2,21 +2,18 @@
 
 <h1>This is image number  {{imagesNumber}}</h1>
 
-<div *ngIf="selectedImage">
+<div class="selected-image-container" *ngIf="selectedImage">
   <img
     class="slide"
-    [style.image-rendering]="'auto'"
-    [style.border-radius]="'10px'"
-    [style.height]="'300px'"
-    [style.background-color]="'#f0f0f0'"
-    [style.object-fit]="'cover'"
     [src]="selectedImage"
     alt="Selected image"
   />
 </div>
 
-<owl-carousel-o [options]="customOptions">
-  <ng-template carouselSlide *ngFor="let item of items">
-    <img [src]="item" alt="Carousel image" (click)="logImageUrl(item)">
-  </ng-template>
-</owl-carousel-o>
+<div class="carousel-container">
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide *ngFor="let item of items">
+      <img [src]="item" alt="Carousel image" (click)="logImageUrl(item)">
+    </ng-template>
+  </owl-carousel-o>
+</div>

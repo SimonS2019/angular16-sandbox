@@ -1,0 +1,28 @@
+.selected-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.selected-image-container img {
+  border-radius: 10px;
+  height: 600px;
+  width: 800px;
+  background-color: #f0f0f0;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-container {
+  margin-top: 20px;
+}
+
+.carousel-container img {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.carousel-container img:hover {
+  transform: scale(1.05);
+}

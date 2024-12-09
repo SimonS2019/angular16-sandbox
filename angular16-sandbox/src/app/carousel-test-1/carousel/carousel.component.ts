@@ -1,19 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css'],
 })
-export class CarouselComponent {
+export class CarouselComponent implements OnInit {
   items = [
-    'https://picsum.photos/200/300?random=1',
-    'https://picsum.photos/200/300?random=2',
-    'https://picsum.photos/200/300?random=3',
-    'https://picsum.photos/200/300?random=4',
-    'https://picsum.photos/200/300?random=5',
-    'https://picsum.photos/200/300?random=6',
-    'https://picsum.photos/200/300?random=7',
+    'https://picsum.photos/600/800?random=1',
+    'https://picsum.photos/600/800?random=2',
+    'https://picsum.photos/600/800?random=3',
+    'https://picsum.photos/600/800?random=4',
+    'https://picsum.photos/600/800?random=5',
+    'https://picsum.photos/600/800?random=6',
+    'https://picsum.photos/600/800?random=7',
   ];
 
   imagesNumber : number = 1;
@@ -43,6 +43,10 @@ export class CarouselComponent {
     },
     nav: true,
   };
+
+  ngOnInit() {
+    this.selectedImage = this.items[0];
+  }
 
   logImageUrl(url: string) {
     this.imagesNumber = this.items.indexOf(url) + 1;
