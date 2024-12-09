@@ -26,3 +26,8 @@
 .carousel-container img:hover {
   transform: scale(1.05);
 }
+
+.image {
+height: 200px;
+width: 200pxs;
+}

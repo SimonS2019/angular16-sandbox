@@ -7,25 +7,27 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class CarouselComponent implements OnInit {
   items = [
+    // 'https://www.youtube.com/watch?v=ekr2nIex040',
     'https://picsum.photos/600/800?random=1',
     'https://picsum.photos/600/800?random=2',
-    // 'https://picsum.photos/600/800?random=3',
-    // 'https://picsum.photos/600/800?random=4',
-    // 'https://picsum.photos/600/800?random=5',
-    // 'https://picsum.photos/600/800?random=6',
-    // 'https://picsum.photos/600/800?random=7',
+    'https://picsum.photos/600/800?random=3',
+    'https://picsum.photos/600/800?random=4',
+    'https://picsum.photos/600/800?random=5',
+    'https://picsum.photos/600/800?random=6',
+    'https://picsum.photos/600/800?random=7',
   ];
 
-  imagesNumber : number = 1;
+  imagesNumber: number = 1;
   selectedImage: string | null = null;
 
   customOptions = {
-    loop: true,
-    margin:10, // margin between images. 
-    merge:true,
+    // loop: true,
+    loop: false,
+    margin: 10, // margin between images.
+    merge: true,
     stagePadding: 50, // padding between images. I think this one is not important.
-
-    center:true,
+    video: true,
+    center: false,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
