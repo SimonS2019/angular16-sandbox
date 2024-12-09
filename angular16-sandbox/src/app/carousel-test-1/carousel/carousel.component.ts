@@ -17,6 +17,7 @@ export class CarouselComponent {
   ];
 
   imagesNumber : number = 1;
+  selectedImage: string | null = null;
 
   customOptions = {
     loop: true,
@@ -45,6 +46,7 @@ export class CarouselComponent {
 
   logImageUrl(url: string) {
     this.imagesNumber = this.items.indexOf(url) + 1;
+    this.selectedImage = url;
     console.log(url);
   }
 }
