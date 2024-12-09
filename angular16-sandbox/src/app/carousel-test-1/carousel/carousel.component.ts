@@ -8,13 +8,11 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class CarouselComponent implements OnInit {
   items = [
     // 'https://www.youtube.com/watch?v=ekr2nIex040',
-    'https://picsum.photos/600/800?random=1',
-    'https://picsum.photos/600/800?random=2',
-    'https://picsum.photos/600/800?random=3',
-    'https://picsum.photos/600/800?random=4',
-    'https://picsum.photos/600/800?random=5',
-    'https://picsum.photos/600/800?random=6',
-    'https://picsum.photos/600/800?random=7',
+    'assets/images/i1.jpg',
+    'assets/images/i2.jpg',
+    'assets/images/i3.jpg',
+    'assets/images/i4.jpg',
+    'assets/images/i5.jpg',
   ];
 
   imagesNumber: number = 1;
