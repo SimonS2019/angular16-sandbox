@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import 'brace';
-import 'brace/mode/text';
-import 'brace/theme/github';
+import 'brace/mode/lua'; // Change mode to lua
+import 'brace/theme/tomorrow_night_bright'; // Change theme to tomorrow_night_bright
 
 @Component({
   selector: 'app-code-editor-demo',
