@@ -1,2 +1,3 @@
-<p>code-editor-demo works!</p>
+<p>This is a code editor demo. You can edit the code below and save it to session storage.</p>
 <ace [config]="config" [mode]="'text'" [theme]="'github'" [(value)]="value"></ace>
+<button (click)="saveToSessionStorage()">Save</button>
