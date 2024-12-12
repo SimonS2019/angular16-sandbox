@@ -21,6 +21,14 @@ const routes: Routes = [
         (m) => m.CarouselTest2Module
       ),
   },
+  {
+    path: 'code-editor',
+    loadChildren: () =>
+      import('./code-editor/code-editor.module').then(
+        (m) => m.CodeEditorModule
+      ),
+  },
+
   // other routes...
 ];
 
