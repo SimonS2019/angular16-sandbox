@@ -1,7 +1,5 @@
 <h1>NGX-Owl-Carousel-O 16.0.0 </h1>
 
-<h1>This is image number  {{imagesNumber}}</h1>
-
 <div class="selected-image-container" >
   <img
     class="slide"
@@ -14,7 +12,7 @@
   <button (click)="prevImage()">Prev</button>
   <button (click)="nextImage()">Next</button>
 
-  <owl-carousel-o [options]="customOptions">
+  <owl-carousel-o [options]="customOptions" class="custom-carousel">
     <ng-template carouselSlide *ngFor="let item of items, index as i" data-merge="3" >
       <img [src]="item" class="image" alt="Carousel image" (click)="goToImage(i)" >
     </ng-template>

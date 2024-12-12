@@ -25,6 +25,7 @@ export class CarouselComponent implements OnInit {
     merge: true,
     stagePadding: 50, // padding between images. I think this one is not important.
     video: true,
+    autowidth: true,
     center: false,
     mouseDrag: true,
     touchDrag: true,
@@ -43,7 +44,7 @@ export class CarouselComponent implements OnInit {
         items: 3,
       },
       940: {
-        items: 4,
+        items: 5,
       },
     },
     nav: true,
