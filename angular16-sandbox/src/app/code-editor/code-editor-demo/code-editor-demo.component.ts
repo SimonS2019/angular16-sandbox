@@ -15,6 +15,7 @@ export class CodeEditorDemoComponent implements OnInit {
     fontSize: 14
   };
   value = 'console.log("Hello, world!");'; // Initialize the value property with some default code
+  showSaveMessage = false; // Add a property to control the visibility of the save message
 
   ngOnInit() {
     const savedValue = sessionStorage.getItem('editorContent');
@@ -25,6 +26,7 @@ export class CodeEditorDemoComponent implements OnInit {
 
   saveToSessionStorage() {
     sessionStorage.setItem('editorContent', this.value);
-    alert('Content saved to session storage!');
+    this.showSaveMessage = true; // Show the save message
+    setTimeout(() => this.showSaveMessage = false, 2000); // Hide the save message after 2 seconds
   }
 }
