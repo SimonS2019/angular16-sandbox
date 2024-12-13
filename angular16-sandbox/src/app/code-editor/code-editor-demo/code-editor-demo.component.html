@@ -1,4 +1,15 @@
 <p>This is a code editor demo. You can edit the code below and save it to session storage.</p>
+<p>
+    The default code is using mock data 3.
+</p>
+
+<div class="button-container">
+    <button (click)="useMockData1()">Use Mock Data 1</button>
+    <button (click)="useMockData2()">Use Mock Data 2</button>
+    <button (click)="useMockData3()">Use Mock Data 3</button>
+    <button (click)="resetEditor()">Reset Editor</button>
+</div>
+
 <ace [config]="config" [mode]="'lua'" [theme]="'tomorrow_night_bright'" [(value)]="value"></ace>
 <div class="button-container">
     <button (click)="saveToSessionStorage()">Save</button>

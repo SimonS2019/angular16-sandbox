@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import 'brace';
-import 'brace/mode/lua'; // Change mode to lua
-import 'brace/theme/tomorrow_night_bright'; // Change theme to tomorrow_night_bright
-import { mockData1 } from '../../../assets/mock-lua/mockData1'; // Import mockData
-import { mockData2 } from '../../../assets/mock-lua/mockData2'; // Import mockData
-import { mockData3 } from '../../../assets/mock-lua/mockData3'; // Import mockData
+import 'brace/mode/lua';
+import 'brace/theme/tomorrow_night_bright';
+import { mockData1 } from '../../../assets/mock-lua/mockData1';
+import { mockData2 } from '../../../assets/mock-lua/mockData2';
+import { mockData3 } from '../../../assets/mock-lua/mockData3';
 
 @Component({
   selector: 'app-code-editor-demo',
@@ -14,13 +14,11 @@ import { mockData3 } from '../../../assets/mock-lua/mockData3'; // Import mockDa
 export class CodeEditorDemoComponent implements OnInit {
   config = {
     readOnly: false,
-    printMargin: 0, // Change this to a number
+    printMargin: 0,
     fontSize: 14
   };
-  // value = mockData1.value; // Initialize the value property with mockData
-  // value = mockData2.value; // Initialize the value property with mockData
-  value = mockData3.value; // Initialize the value property with mockData
-  showSaveMessage = false; // Add a property to control the visibility of the save message
+  value = mockData3.value; // Initialize the value property with mockData1
+  showSaveMessage = false;
 
   ngOnInit() {
     const savedValue = sessionStorage.getItem('editorContent');
@@ -31,7 +29,24 @@ export class CodeEditorDemoComponent implements OnInit {
 
   saveToSessionStorage() {
     sessionStorage.setItem('editorContent', this.value);
-    this.showSaveMessage = true; // Show the save message
-    setTimeout(() => this.showSaveMessage = false, 2000); // Hide the save message after 2 seconds
+    this.showSaveMessage = true;
+    setTimeout(() => this.showSaveMessage = false, 2000);
+  }
+
+  useMockData1() {
+    this.value = mockData1.value;
+  }
+
+  useMockData2() {
+    this.value = mockData2.value;
+  }
+
+  useMockData3() {
+    this.value = mockData3.value;
+  }
+
+  resetEditor() {
+    this.value = mockData3.value;
+    sessionStorage.removeItem('editorContent');
   }
 }
