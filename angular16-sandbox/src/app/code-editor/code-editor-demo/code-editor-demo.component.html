@@ -9,9 +9,10 @@
     <button (click)="useMockData3()">Use Mock Data 3</button>
     <button (click)="resetEditor()">Reset Editor</button>
 </div>
+<br>
 
 <ace [config]="config" [mode]="'lua'" [theme]="'tomorrow_night_bright'" [(value)]="value"></ace>
 <div class="button-container">
-    <button (click)="saveToSessionStorage()">Save</button>
+    <button (click)="saveToSessionStorage()" class="save-button">Save</button>
 </div>
 <div *ngIf="showSaveMessage" class="save-message">Content saved!</div>
