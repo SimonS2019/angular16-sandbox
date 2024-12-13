@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import 'brace';
 import 'brace/mode/lua'; // Change mode to lua
 import 'brace/theme/tomorrow_night_bright'; // Change theme to tomorrow_night_bright
+import { mockData } from '../../../assets/mock-lua/mockData1'; // Import mockData
 
 @Component({
   selector: 'app-code-editor-demo',
@@ -14,7 +15,7 @@ export class CodeEditorDemoComponent implements OnInit {
     printMargin: 0, // Change this to a number
     fontSize: 14
   };
-  value = 'console.log("Hello, world!");'; // Initialize the value property with some default code
+  value = mockData.value; // Initialize the value property with mockData
   showSaveMessage = false; // Add a property to control the visibility of the save message
 
   ngOnInit() {
