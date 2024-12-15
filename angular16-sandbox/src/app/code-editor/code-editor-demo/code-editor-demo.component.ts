@@ -1,9 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import 'brace';
-import 'brace/mode/lua';
-import 'brace/theme/tomorrow_night_bright';
+// import 'brace/mode/lua';
+// import 'brace/theme/tomorrow_night_bright';
+// // import 'brace/ext/language_tools';
+// import * as ace from 'brace';
 import 'brace/ext/language_tools';
-
+import 'brace/ext/searchbox';
+import 'brace/mode/json';
+import 'brace/mode/lua';
+import 'brace/snippets/json';
+import 'brace/snippets/lua';
+import 'brace/snippets/text';
+import 'brace/theme/tomorrow';
+import 'brace/theme/tomorrow_night_bright';
 import { mockData1 } from '../../../assets/mock-lua/mockData1';
 import { mockData2 } from '../../../assets/mock-lua/mockData2';
 import { mockData3 } from '../../../assets/mock-lua/mockData3';
