@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import 'brace';
 import 'brace/mode/lua';
 import 'brace/theme/tomorrow_night_bright';
+import 'brace/ext/language_tools';
+
 import { mockData1 } from '../../../assets/mock-lua/mockData1';
 import { mockData2 } from '../../../assets/mock-lua/mockData2';
 import { mockData3 } from '../../../assets/mock-lua/mockData3';
@@ -14,8 +16,14 @@ import { mockData3 } from '../../../assets/mock-lua/mockData3';
 export class CodeEditorDemoComponent implements OnInit {
   config = {
     readOnly: false,
-    printMargin: 0,
-    fontSize: 14
+    printMargin: 100,
+    fontSize: 14,
+    autoScrollEditorIntoView: true,
+    enableBasicAutocompletion: true,
+    enableSnippets: true,
+    enableLiveAutocompletion: true,
+    showPrintMargin: true
+
   };
   value = mockData3.value; // Initialize the value property with mockData1
   showSaveMessage = false;
