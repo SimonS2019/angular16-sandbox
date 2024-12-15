@@ -15,16 +15,16 @@ export const mockData3 = {
        return false
     end
 
-    importScript('c65a0873-165e-41a4-99e0-aa330554085b') -- LIB - SendGridV2
+    importScript('REDACTED_GUID') -- LIB - SendGridV2
 
     local email_dispatcher = EMAIL():newDispatcher() -- Creating the email object
 
     function sendEmail(to, body, subject)
         
-        from = "noreply@shapetechnology.co.nz"
+        from = "noreply@example.com"
         body_type = "text/html"
         if(subject == nil) then 
-            subject = "Shape Technology System Alert"
+            subject = "System Alert"
         end
          
         email_dispatcher:NewMailAndSend(to, from, subject, body, body_type)
@@ -32,6 +32,6 @@ export const mockData3 = {
     end
 
     local body = "Here's some stuff for you..."
-    sendEmail("marco.vandermerwe@shape.co.nz", body,"Hello I'm a Test Alarm")
+    sendEmail("recipient@example.com", body,"Hello I'm a Test Alarm")
   `
 };
