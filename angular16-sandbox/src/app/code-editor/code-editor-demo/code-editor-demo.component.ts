@@ -19,10 +19,10 @@ export class CodeEditorDemoComponent implements OnInit {
     printMargin: 100,
     fontSize: 14,
     autoScrollEditorIntoView: true,
-    enableBasicAutocompletion: true,
+    enableBasicAutocompletion: true,  //work
     enableSnippets: true,
-    enableLiveAutocompletion: true,
-    showPrintMargin: true
+    enableLiveAutocompletion: true, //work
+    showPrintMargin: true //work
 
   };
   value = mockData3.value; // Initialize the value property with mockData1
