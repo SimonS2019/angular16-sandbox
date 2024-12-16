@@ -102,8 +102,16 @@ export class CodeEditorDemoComponent implements OnInit, AfterViewInit {
     if (editorElement) {
       editorElement.addEventListener('click', () => {
         console.log('Editor clicked!');
+        this.redrawEditor();
       });
     }
+  }
+
+  private redrawEditor() {
+    const editor = ace.edit('codeEditor');
+    editor.resize();
+    editor.setValue(this.value, -1); // Reapply the value
+    editor.setTheme('ace/theme/tomorrow_night_bright'); // Reapply the theme
   }
 
   saveToSessionStorage() {
