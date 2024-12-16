@@ -6,7 +6,7 @@ import { CodeEditorDemoComponent } from './code-editor-demo/code-editor-demo.com
 import { ACE_CONFIG, AceConfigInterface, AceModule } from 'ngx-ace-wrapper';
 
 const DEFAULT_ACE_CONFIG: AceConfigInterface = {
-  tabSize: 2,
+  tabSize: 4,
 };
 @NgModule({
   declarations: [CodeEditorDemoComponent],
