@@ -8,14 +8,14 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'NGX-Owl-Carousel-O',
+    path: 'ngx-owl-carousel-o',
     loadChildren: () =>
       import('./carousel-test-1/carousel-test-1.module').then(
         (m) => m.CarouselTest1Module
       ),
   },
   {
-    path: 'NGX-Slick-Carousel',
+    path: 'ngx-slick-carousel',
     loadChildren: () =>
       import('./carousel-test-2/carousel-test-2.module').then(
         (m) => m.CarouselTest2Module

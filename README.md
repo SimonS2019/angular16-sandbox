@@ -18,8 +18,9 @@ This repository is a **sandbox project** designed to test and explore various **
 ## Note
 
 Currently, only the following paths work:
-- **NGX-Owl-Carousel-O**
-- **NGX-Slick-Carousel**
+
+- **ngx-owl-carousel-o**
+- **ngx-slick-carousel**
 
 ## Getting Started
 

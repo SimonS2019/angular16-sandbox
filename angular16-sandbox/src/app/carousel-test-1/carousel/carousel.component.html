@@ -1,11 +1,7 @@
-<h1>NGX-Owl-Carousel-O 16.0.0 </h1>
+<h1>ngx-owl-carousel-o 16.0.0 </h1>
 
-<div class="selected-image-container" >
-  <img
-    class="slide"
-    [src]="selectedImage"
-    alt="Selected image"
-  />
+<div class="selected-image-container">
+  <img class="slide" [src]="selectedImage" alt="Selected image" />
 </div>
 
 <div class="carousel-container">
@@ -13,8 +9,8 @@
   <button (click)="nextImage()">Next</button>
 
   <owl-carousel-o [options]="customOptions" class="custom-carousel">
-    <ng-template carouselSlide *ngFor="let item of items, index as i" data-merge="3" >
-      <img [src]="item" class="image" alt="Carousel image" (click)="goToImage(i)" >
+    <ng-template carouselSlide *ngFor="let item of items, index as i" data-merge="3">
+      <img [src]="item" class="image" alt="Carousel image" (click)="goToImage(i)">
     </ng-template>
   </owl-carousel-o>
 </div>
