@@ -13,7 +13,7 @@
 </div>
 <br>
 
-<ace [config]="config" [mode]="'lua'" [theme]="'tomorrow_night_bright'" [(value)]="value"></ace>
+<ace id="codeEditor" [config]="config" [mode]="'lua'" [theme]="'tomorrow_night_bright'" [(value)]="value"></ace>
 <div class="button-container">
     <button (click)="saveToSessionStorage()" class="save-button">Save</button>
 </div>

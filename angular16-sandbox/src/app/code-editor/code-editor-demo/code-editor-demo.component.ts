@@ -50,6 +50,7 @@ export class CodeEditorDemoComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.SetupAutoComplete(this.docs);
+    this.addClickListenerToEditor();
   }
 
   private SetupAutoComplete(docItems: LuaDocItem[]) {
@@ -94,6 +95,15 @@ export class CodeEditorDemoComponent implements OnInit, AfterViewInit {
     };
     const langTools = ace.acequire('ace/ext/language_tools');
     langTools.addCompleter(motivLuaWordCompleter);
+  }
+
+  private addClickListenerToEditor() {
+    const editorElement = document.getElementById('codeEditor');
+    if (editorElement) {
+      editorElement.addEventListener('click', () => {
+        console.log('Editor clicked!');
+      });
+    }
   }
 
   saveToSessionStorage() {
