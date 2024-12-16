@@ -28,14 +28,14 @@ export interface LuaDocItem {
 })
 export class CodeEditorDemoComponent implements OnInit, AfterViewInit {
   config = {
-    readOnly: false,
-    printMargin: 100,
-    fontSize: 14,
+    // readOnly: false,
+    // printMargin: 100,
+    // fontSize: 14,
     autoScrollEditorIntoView: true,
     enableBasicAutocompletion: true,
     enableSnippets: true,
     enableLiveAutocompletion: true,
-    showPrintMargin: true,
+    showPrintMargin: false,
   };
   value = mockData3.value; // Initialize the value property with mockData1
   showSaveMessage = false;
