@@ -3,6 +3,8 @@
     The default code is using mock data 3.
 </p>
 
+
+
 <div class="button-container">
     <button (click)="useMockData1()">Use Mock Data 1</button>
     <button (click)="useMockData2()">Use Mock Data 2</button>
@@ -16,3 +18,16 @@
     <button (click)="saveToSessionStorage()" class="save-button">Save</button>
 </div>
 <div *ngIf="showSaveMessage" class="save-message">Content saved!</div>
+
+<div class="info-container">
+    <p>This component uses the following settings:</p>
+    <ul>
+        <li>autoScrollEditorIntoView: true</li>
+        <li>enableBasicAutocompletion: true</li>
+        <li>enableSnippets: true</li>
+        <li>enableLiveAutocompletion: true</li>
+        <li>showPrintMargin: false</li>
+    </ul>
+    <p>These settings are the same as the previous settings in our Lua scripter editor.</p>
+</div>
+<p>This code sets up an autocomplete feature for an ACE editor instance using custom Lua documentation items.</p>
