@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import 'brace';
 import 'brace/ext/language_tools';
 import 'brace/ext/searchbox';
@@ -27,6 +27,8 @@ export interface LuaDocItem {
   styleUrls: ['./code-editor-demo.component.css'],
 })
 export class CodeEditorDemoComponent implements OnInit, AfterViewInit {
+  // @ViewChild('editor', { static: false }) editor;
+
   config = {
     // readOnly: false,
     // printMargin: 100,
@@ -50,7 +52,6 @@ export class CodeEditorDemoComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.SetupAutoComplete(this.docs);
-    this.addClickListenerToEditor();
   }
 
   private SetupAutoComplete(docItems: LuaDocItem[]) {
@@ -97,21 +98,19 @@ export class CodeEditorDemoComponent implements OnInit, AfterViewInit {
     langTools.addCompleter(motivLuaWordCompleter);
   }
 
-  private addClickListenerToEditor() {
-    const editorElement = document.getElementById('codeEditor');
-    if (editorElement) {
-      editorElement.addEventListener('click', () => {
-        console.log('Editor clicked!');
-        this.redrawEditor();
-      });
-    }
-  }
 
   private redrawEditor() {
     const editor = ace.edit('codeEditor');
     editor.resize();
     editor.setValue(this.value, -1); // Reapply the value
     editor.setTheme('ace/theme/tomorrow_night_bright'); // Reapply the theme
+  }
+
+  testResize() {
+    console.log("testResize");
+    
+    const editor = ace.edit('codeEditor');
+    editor.resize();
   }
 
   saveToSessionStorage() {
