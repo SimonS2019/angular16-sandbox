@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import 'brace';
 import 'brace/ext/language_tools';
 import 'brace/ext/searchbox';
@@ -27,7 +27,7 @@ export interface LuaDocItem {
   styleUrls: ['./code-editor-demo.component.css'],
 })
 export class CodeEditorDemoComponent implements OnInit, AfterViewInit {
-  // @ViewChild('editor', { static: false }) editor;
+  @ViewChild('codeEditor', { static: false }) codeEditor!: ElementRef;
 
   config = {
     // readOnly: false,
@@ -110,7 +110,7 @@ export class CodeEditorDemoComponent implements OnInit, AfterViewInit {
     console.log("testResize");
     
     const editor = ace.edit('codeEditor');
-    editor.resize();
+    editor.resize(true);
   }
 
   saveToSessionStorage() {
