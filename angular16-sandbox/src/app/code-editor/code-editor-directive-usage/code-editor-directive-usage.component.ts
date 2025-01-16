@@ -40,17 +40,23 @@ export class CodeEditorDirectiveUsageComponent implements OnInit, AfterViewInit 
   constructor() {}
 
   ngOnInit() {
-    this.getDatafromSessionStorage();
+    this.getData();
   }
 
   ngAfterViewInit() {
     this.editorInit();
   }
 
-  getDatafromSessionStorage() {
+  getData() {
     const savedValue = sessionStorage.getItem('editorContent');
     if (savedValue) {
+      //if there is a saved value in the session storage, use it
       this.data = savedValue;
+      const editor = ace.edit('codeEditor');
+      editor.setValue(this.data, -1);
+    }
+    else {
+      //if there is no saved value in the session storage, use the default value
       const editor = ace.edit('codeEditor');
       editor.setValue(this.data, -1);
     }
