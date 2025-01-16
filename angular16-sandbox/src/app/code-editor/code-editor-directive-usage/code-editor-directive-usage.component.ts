@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class CodeEditorDirectiveUsageComponent {
 
+  config = {
+    // readOnly: false,
+    // printMargin: 100,
+    // fontSize: 14,
+    autoScrollEditorIntoView: true,
+    enableBasicAutocompletion: true,
+    enableSnippets: true,
+    enableLiveAutocompletion: true,
+    showPrintMargin: false,
+  };
+
+
+  
+  codeChanged(value: any) {
+    console.log('Code changed:', value);
+  }
+
 }
