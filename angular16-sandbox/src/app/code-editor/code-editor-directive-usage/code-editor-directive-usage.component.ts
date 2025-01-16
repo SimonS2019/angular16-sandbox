@@ -8,6 +8,8 @@ import {
 import * as ace from 'brace';
 import 'brace/theme/tomorrow_night_bright';
 import 'brace/theme/tomorrow';
+import 'brace/theme/monokai';
+import 'brace/theme/github';
 import 'brace/mode/lua';
 import 'brace/mode/json';
 import 'brace/ext/language_tools';
@@ -78,5 +80,10 @@ export class CodeEditorDirectiveUsageComponent implements OnInit, AfterViewInit 
 
   codeChanged(e: any) {
     console.log('Code changed:', e);
+  }
+
+  changeTheme(theme: string) {
+    const editor = ace.edit('codeEditor');
+    editor.setTheme(theme);
   }
 }
