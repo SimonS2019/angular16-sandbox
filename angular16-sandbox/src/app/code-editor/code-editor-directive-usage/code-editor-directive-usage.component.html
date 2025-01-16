@@ -1,3 +1,10 @@
 <p>?This is a code editor directive usage demo. You can edit the code below and save it to session storage.</p>
 
+<div class="button-container">
+    <button style="background-color: rgb(226, 67, 67);" routerLink="/code-editor">
+        Component Usage Demo
+    </button>
+</div>
+<br>
+
 <div class="ace" fxFlex="auto" [ace]="config" (valueChange)="codeChanged($event)"></div>

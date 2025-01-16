@@ -3,3 +3,49 @@
     height: 400px;
     width: 80%;
 }
+
+.button-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.button-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 5px; /* Add this line to add space between buttons */
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
+
+.button-container .save-button {
+    background-color: #28a745; /* Green color for save button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.button-container .save-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.save-message {
+    text-align: center;
+    color: green;
+    font-size: 16px;
+    margin-top: 10px;
+    animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
