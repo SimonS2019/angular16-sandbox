@@ -7,7 +7,7 @@
 </div>
 <br>
 
-<div class="ace" fxFlex="auto" [ace]="config" (valueChange)="codeChanged($event)"></div>
+<div id="codeEditor" class="ace" fxFlex="auto" [ace]="config" (change)="codeChanged($event)"></div>
 <br>
 
 <div class="button-container">
