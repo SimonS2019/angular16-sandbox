@@ -22,7 +22,9 @@ import 'brace/snippets/json';
   templateUrl: './code-editor-directive-usage.component.html',
   styleUrls: ['./code-editor-directive-usage.component.css'],
 })
-export class CodeEditorDirectiveUsageComponent implements OnInit, AfterViewInit {
+export class CodeEditorDirectiveUsageComponent
+  implements OnInit, AfterViewInit
+{
   @ViewChild('codeEditor', { static: false }) codeEditor!: ElementRef;
 
   config = {
@@ -56,8 +58,7 @@ export class CodeEditorDirectiveUsageComponent implements OnInit, AfterViewInit 
       this.data = savedValue;
       const editor = ace.edit('codeEditor');
       editor.setValue(this.data, -1);
-    }
-    else {
+    } else {
       //if there is no saved value in the session storage, use the default value
       const editor = ace.edit('codeEditor');
       editor.setValue(this.data, -1);
@@ -66,7 +67,7 @@ export class CodeEditorDirectiveUsageComponent implements OnInit, AfterViewInit 
 
   editorInit() {
     const editor = ace.edit('codeEditor');
-    editor.setTheme('ace/theme/tomorrow_night_bright');
+    editor.setTheme('ace/theme/monokai');
     editor.getSession().setMode('ace/mode/lua');
     editor.setOptions(this.config);
     editor.resize(true);
