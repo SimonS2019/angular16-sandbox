@@ -1,11 +1,26 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-
+import {
+  Component,
+  AfterViewInit,
+  ViewChild,
+  ElementRef,
+  OnInit,
+} from '@angular/core';
+import * as ace from 'brace';
+import 'brace/theme/tomorrow_night_bright';
+import 'brace/theme/tomorrow';
+import 'brace/mode/lua';
+import 'brace/mode/json';
+import 'brace/ext/language_tools';
+import 'brace/ext/searchbox';
+import 'brace/snippets/text';
+import 'brace/snippets/lua';
+import 'brace/snippets/json';
 @Component({
   selector: 'app-code-editor-directive-usage',
   templateUrl: './code-editor-directive-usage.component.html',
   styleUrls: ['./code-editor-directive-usage.component.css'],
 })
-export class CodeEditorDirectiveUsageComponent {
+export class CodeEditorDirectiveUsageComponent implements OnInit {
   @ViewChild('codeEditor', { static: false }) codeEditor!: ElementRef;
 
   config = {
@@ -22,10 +37,18 @@ export class CodeEditorDirectiveUsageComponent {
   data = 'This is a test value for the code editor directive usage component.';
   showSaveMessage = false;
 
-  constructor() {
+  constructor() {}
+
+  ngOnInit() {
+    this.getDatafromSessionStorage();
+  }
+
+  getDatafromSessionStorage() {
     const savedValue = sessionStorage.getItem('editorContent');
     if (savedValue) {
       this.data = savedValue;
+      const editor = ace.edit('codeEditor');
+      editor.setValue(this.data, -1);
     }
   }
 
