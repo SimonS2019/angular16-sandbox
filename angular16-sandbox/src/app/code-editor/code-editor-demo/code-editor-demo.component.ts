@@ -120,6 +120,6 @@ export class CodeEditorDemoComponent implements OnInit, AfterViewInit {
   }
 
   codeChanged(value: any) {
-    console.log(value);
+    // console.log(value);
   }
 }
