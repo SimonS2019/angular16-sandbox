@@ -20,7 +20,7 @@ import 'brace/snippets/json';
   templateUrl: './code-editor-directive-usage.component.html',
   styleUrls: ['./code-editor-directive-usage.component.css'],
 })
-export class CodeEditorDirectiveUsageComponent implements OnInit {
+export class CodeEditorDirectiveUsageComponent implements OnInit, AfterViewInit {
   @ViewChild('codeEditor', { static: false }) codeEditor!: ElementRef;
 
   config = {
@@ -43,6 +43,10 @@ export class CodeEditorDirectiveUsageComponent implements OnInit {
     this.getDatafromSessionStorage();
   }
 
+  ngAfterViewInit() {
+    this.editorInit();
+  }
+
   getDatafromSessionStorage() {
     const savedValue = sessionStorage.getItem('editorContent');
     if (savedValue) {
@@ -50,6 +54,14 @@ export class CodeEditorDirectiveUsageComponent implements OnInit {
       const editor = ace.edit('codeEditor');
       editor.setValue(this.data, -1);
     }
+  }
+
+  editorInit() {
+    const editor = ace.edit('codeEditor');
+    editor.setTheme('ace/theme/tomorrow_night_bright');
+    editor.getSession().setMode('ace/mode/lua');
+    editor.setOptions(this.config);
+    editor.resize(true);
   }
 
   saveToSessionStorage() {
