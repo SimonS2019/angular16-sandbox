@@ -8,3 +8,9 @@
 <br>
 
 <div class="ace" fxFlex="auto" [ace]="config" (valueChange)="codeChanged($event)"></div>
+<br>
+
+<div class="button-container">
+    <button (click)="saveToSessionStorage()" class="save-button">Save</button>
+</div>
+<div *ngIf="showSaveMessage" class="save-message">Content saved!</div>
