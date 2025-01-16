@@ -118,4 +118,8 @@ export class CodeEditorDemoComponent implements OnInit, AfterViewInit {
     this.value = mockData3.value;
     sessionStorage.removeItem('editorContent');
   }
+
+  codeChanged(value: any) {
+    console.log(value);
+  }
 }
