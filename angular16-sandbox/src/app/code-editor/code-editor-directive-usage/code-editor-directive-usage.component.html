@@ -8,10 +8,11 @@
     <button (click)="changeTheme('ace/theme/tomorrow')">Tomorrow Theme</button>
     <button (click)="changeTheme('ace/theme/monokai')">Monokai Theme</button>
     <button (click)="changeTheme('ace/theme/github')">GitHub Theme</button>
+    <button style="background-color: rgb(73, 221, 67);" (click)="getEditorValue()">get Editor Value</button>
 </div>
 <br>
 
-<div id="codeEditor" class="ace" fxFlex="auto" [ace]="config" (change)="codeChanged($event)">{{data}}</div>
+<div id="codeEditor" class="ace" fxFlex="auto" [ace]="config" (change)="codeChanged($event)" (selectionChange)="onSelectionChange($event)" (click)="testClick($event)">{{data}}</div>
 <br>
 
 <div class="button-container">

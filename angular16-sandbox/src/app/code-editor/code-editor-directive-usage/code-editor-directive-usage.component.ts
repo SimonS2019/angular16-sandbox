@@ -80,11 +80,33 @@ export class CodeEditorDirectiveUsageComponent
   }
 
   codeChanged(e: any) {
-    console.log('Code changed:', e);
+    // console.log('Code changed:', e);
+    // console.log('Current value:', this.data);
+    
   }
 
   changeTheme(theme: string) {
     const editor = ace.edit('codeEditor');
     editor.setTheme(theme);
+  }
+  
+  onSelectionChange(e: any) {
+    // console.log('Selection changed:', e);
+  }
+
+  testEnvt(e: any) {
+    console.log('Test event:', e);
+    
+    console.log('Test event:', e);
+  }
+
+  testClick(e: any) {
+    // console.log('Test click event.');
+    // console.log('Test event:', e);
+  }
+
+  getEditorValue() {
+    const editor = ace.edit('codeEditor');
+    console.log('Editor value:', editor.getValue());
   }
 }
