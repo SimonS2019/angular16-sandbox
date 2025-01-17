@@ -74,7 +74,7 @@ export class CodeEditorDirectiveUsageComponent
   }
 
   saveToSessionStorage() {
-    sessionStorage.setItem('editorContent', this.data);
+    sessionStorage.setItem('editorContent', ace.edit('codeEditor').getValue());
     this.showSaveMessage = true;
     setTimeout(() => (this.showSaveMessage = false), 2000);
   }
