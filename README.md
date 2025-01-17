@@ -21,6 +21,7 @@ Currently, only the following paths work:
 
 - **ngx-owl-carousel-o**
 - **ngx-slick-carousel**
+- **ngx-ace-wrapper** - A code editor component (includes both component usage and directive usage)
 
 ## Getting Started
 
