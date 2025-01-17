@@ -1,4 +1,8 @@
-<p>?This is a code editor directive usage demo. You can edit the code below and save it to session storage.</p>
+<p>This is a code editor directive usage demo. You can edit the code below and save it to session storage.</p>
+
+<p>
+    This page also has a group of buttons that allow you to change the theme of the code editor.
+</p>
 
 <div class="button-container">
     <button style="background-color: rgb(226, 67, 67);" routerLink="/code-editor">
@@ -12,7 +16,8 @@
 </div>
 <br>
 
-<div id="codeEditor" class="ace" fxFlex="auto" [ace]="config" (change)="codeChanged($event)" (selectionChange)="onSelectionChange($event)" (click)="testClick($event)">{{data}}</div>
+<div id="codeEditor" class="ace" fxFlex="auto" [ace]="config" (change)="codeChanged($event)"
+    (selectionChange)="onSelectionChange($event)" (click)="testClick($event)">{{data}}</div>
 <br>
 
 <div class="button-container">
